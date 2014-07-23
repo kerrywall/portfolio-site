@@ -1,0 +1,104 @@
+// normalize + all that junk
+
+@import 'normalize';
+
+// variables
+
+$nephritis: #27ae60;
+
+// site styles
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	background: #f7f7f7;
+}
+
+h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.wrapper  {
+	width: 80%;
+	margin: 0 auto;
+	z-index: -999;
+
+	.banner {
+		width: 100%;
+		background-image: url(../images/splashy.jpg);
+		background-attachment: fixed;
+		background-size: cover;
+		background-repeat: none;
+		color: #f7f7f7;
+		padding: 100px;
+		height: 300px;
+		margin: 50px 0 0 0;
+	}
+
+	.area {
+		margin: 0;
+		padding: 50px;
+		&:nth-child(even) {
+			background: lighten(#f7f7f7, 1%);
+		}
+	}
+
+	.portfolio {
+		.item {
+			width: 49%;
+			position: relative;
+			display: inline;
+			float: left;
+			margin: 1px 0 0 1px;
+			background:#111;
+		}
+	}
+
+	.about {
+		img {
+			border-radius: 10px;
+			border: 1px #ccc solid;
+			float: left;
+			margin-right: 20px;
+		}
+	}
+}
+
+header {
+	width: 100%;
+	padding: 20px 10px;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	background: #fff;
+	text-transform: uppercase;
+
+
+	h1.name {
+		font-size: 16px;
+		display: inline-block;
+		letter-spacing: 1px;
+		font-weight: 300;
+		margin: 0;
+		color: $nephritis;
+	}
+
+	ul.nav {
+		display: inline-block;
+		list-style-type: none;
+		font-weight: 300;
+		margin: 0;
+		font-size: 14px;
+
+		li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+	}
+}
