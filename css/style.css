@@ -139,16 +139,24 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   background: #f7f7f7; }
+  body a {
+    text-decoration: underline;
+    -webkit-transition: all 1s;
+            transition: all 1s;
+    color: #111; }
+    body a:hover {
+      background: #eaeaea;
+      text-decoration: none; }
 
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
-  text-align: center;
-  line-height: 1.5; }
+  text-align: center; }
 
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  z-index: -999; }
+  z-index: -999;
+  line-height: 1.5; }
   .wrapper .banner {
     width: 100%;
     background-image: url(../images/splashy.jpg);
@@ -171,11 +179,31 @@ h1, h2, h3, h4, h5 {
     float: left;
     margin: 1px 0 0 1px;
     background: #111; }
-  .wrapper .about img {
-    border-radius: 10px;
-    border: 1px #ccc solid;
-    float: left;
-    margin-right: 20px; }
+  .wrapper .about {
+    font-size: 14px;
+    text-align: justify; }
+    .wrapper .about img {
+      border-radius: 10px;
+      border: 1px #ccc solid;
+      float: left;
+      margin-right: 20px; }
+  .wrapper .work .skills {
+    width: 100%;
+    margin-bottom: 50px; }
+    .wrapper .work .skills h3 {
+      text-transform: lowercase; }
+    .wrapper .work .skills .skill {
+      width: 24%;
+      display: inline;
+      float: left;
+      margin: 1px 0 0 1px;
+      background: #ececec;
+      padding: 20px;
+      text-align: center;
+      -webkit-transition: all 0.5s;
+              transition: all 0.5s; }
+      .wrapper .work .skills .skill:hover {
+        background: #dedede; }
 
 header {
   width: 100%;
@@ -186,6 +214,8 @@ header {
   z-index: 999;
   background: #fff;
   text-transform: uppercase; }
+  header a {
+    text-decoration: none; }
   header h1.name {
     font-size: 16px;
     display: inline-block;
@@ -202,3 +232,12 @@ header {
     header ul.nav li {
       display: inline-block;
       margin: 0 10px; }
+
+footer {
+  width: 100%;
+  background: #333;
+  color: #f7f7f7;
+  padding: 20px; }
+  footer h4 {
+    text-align: left;
+    font-weight: bold; }
