@@ -44,6 +44,16 @@ module.exports = function(grunt) {
                dest: 'images/'                  // Destination path prefix
              }]
            }
+     },
+
+     cssmin: {
+       minify: {
+         expand: true,
+         cwd: 'css/',
+         src: ['*.css', '!*.min.css'],
+         dest: 'css/',
+         ext: '.min.css'
+       }
      }
  });
 
@@ -52,7 +62,8 @@ module.exports = function(grunt) {
  grunt.loadNpmTasks('grunt-autoprefixer');
  grunt.loadNpmTasks('grunt-contrib-connect');
  grunt.loadNpmTasks('grunt-contrib-imagemin');
+ grunt.loadNpmTasks('grunt-contrib-cssmin');
 
  // Default task(s).
- grunt.registerTask('default', ['connect','watch', 'imagemin']);
+ grunt.registerTask('default', ['connect','watch', 'imagemin', 'cssmin']);
 };

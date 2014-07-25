@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5 {
     background-repeat: none;
     color: #f7f7f7;
     padding: 100px;
-    height: 300px;
+    height: 400px;
     margin: 50px 0 0 0;
     position: relative; }
     .wrapper .banner h2 {
@@ -331,6 +331,8 @@ footer {
     .wrapper .portfolio .item {
       width: 100%;
       display: block; }
+      .wrapper .portfolio .item a {
+        text-decoration: none; }
       .wrapper .portfolio .item .description {
         display: block; }
       .wrapper .portfolio .item:hover .description {
@@ -338,10 +340,15 @@ footer {
         position: static;
         background: none;
         padding: 0;
-        color: #000; } }
+        color: #000;
+        text-decoration: underline; } }
 @media (max-width: 510px) {
   header ul.nav {
     padding: 0; } }
 @media (max-width: 400px) {
-  .wrapper .about img {
-    width: 100px; } }
+  .wrapper .banner span.tagline {
+    font-size: 12px; }
+  .wrapper .about {
+    font-size: 18px; }
+    .wrapper .about img {
+      width: 100px; } }

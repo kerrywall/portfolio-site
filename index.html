@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>it's kerry wall</title>
+	<title>kerry wall | front-end web development &amp; new media journalism</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
 		<h1 class="name">kerry wall</h1>
 		<ul class="nav">
-			<li><a href="#home">home</a></li>
-			<li><a href="#work">work</a></li>
-			<li><a href="#about">about</a></li>
-			<li><a href="#skills">skills</a></li>
-			<li><a href="#contact">contact</a></li>
+			<li><a data-scroll href="#home">home</a></li>
+			<li><a data-scroll href="#work">work</a></li>
+			<li><a data-scroll href="#about">about</a></li>
+			<li><a data-scroll href="#skills">skills</a></li>
+			<li><a data-scroll href="#contact">contact</a></li>
 		</ul>
 	</header>
 
@@ -136,5 +137,9 @@
 			<p>&copy; 2014</p>
 		</div>
 	</footer>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script>
+    smoothScroll.init();
+  </script>
 </body>
 </html>
