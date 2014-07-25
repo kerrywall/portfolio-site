@@ -348,6 +348,8 @@ footer {
 @media (max-width: 400px) {
   .wrapper .banner span.tagline {
     font-size: 12px; }
+  .wrapper .area {
+    padding: 10px; }
   .wrapper .about {
     font-size: 18px; }
     .wrapper .about img {
