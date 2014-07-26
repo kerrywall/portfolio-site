@@ -265,19 +265,22 @@ h1, h2, h3, h4, h5 {
               transition: all 0.5s; }
       .wrapper .work .skills .skill:hover {
         background: #dedede; }
-  .wrapper .contact {
+  .wrapper .contact .contacties {
+    width: 50%;
     margin: 0 auto; }
-    .wrapper .contact .contacty {
+    .wrapper .contact .contacties .contacty {
       width: 33%;
       float: left; }
-      .wrapper .contact .contacty img {
+      .wrapper .contact .contacties .contacty img {
         width: 70%; }
-      .wrapper .contact .contacty a.twitter:hover {
+      .wrapper .contact .contacties .contacty a.twitter:hover {
         background: #00aced; }
-      .wrapper .contact .contacty a.linkedIn:hover {
+      .wrapper .contact .contacties .contacty a.linkedIn:hover {
         background: #007bb6; }
-      .wrapper .contact .contacty a.gitHub:hover {
+      .wrapper .contact .contacties .contacty a.gitHub:hover {
         background: #111; }
+  .wrapper p {
+    clear: both; }
 
 header {
   width: 100%;

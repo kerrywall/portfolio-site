@@ -172,24 +172,30 @@
 		}
 
 		.contact {
-			margin: 0 auto;
-			.contacty {
-				width: 33%;
-				float: left;
-				img {
-					width: 70%;
-				}
-				a.twitter:hover {
-					background: #00aced;
-				}
-				a.linkedIn:hover {
-					background: #007bb6;
-				}
-				a.gitHub:hover {
-					background: #111;
+			.contacties {
+				width: 50%;
+				margin: 0 auto;
+				.contacty {
+					width: 33%;
+					float: left;
+					
+					img {
+						width: 70%;
+					}
+					a.twitter:hover {
+						background: #00aced;
+					}
+					a.linkedIn:hover {
+						background: #007bb6;
+					}
+					a.gitHub:hover {
+						background: #111;
+					}
 				}
 			}
-			
+		}
+		p {
+			clear: both;
 		}
 	}
 
