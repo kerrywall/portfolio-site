@@ -152,45 +152,46 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   text-align: center; }
 
+.banner {
+  width: 100%;
+  background-image: url(../images/wall-splash.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  color: #f7f7f7;
+  padding: 100px;
+  height: 400px;
+  margin: 50px 0 0 0;
+  position: relative; }
+  .banner h2 {
+    text-align: right;
+    text-transform: lowercase;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 36px;
+    margin: 0;
+    width: 100%;
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.65)));
+    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+    /* IE6-9 */ }
+  .banner span.tagline {
+    font-size: 24px; }
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
   z-index: -999;
   line-height: 1.5; }
-  .wrapper .banner {
-    width: 100%;
-    background-image: url(../images/wall-splash.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: none;
-    color: #f7f7f7;
-    padding: 100px;
-    height: 400px;
-    margin: 50px 0 0 0;
-    position: relative; }
-    .wrapper .banner h2 {
-      text-align: right;
-      text-transform: lowercase;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      font-size: 36px;
-      margin: 0;
-      width: 100%;
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-      /* Chrome10+,Safari5.1+ */
-      /* Opera 11.10+ */
-      /* IE10+ */
-      background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.65)));
-      background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
-      /* IE6-9 */ }
-    .wrapper .banner span.tagline {
-      font-size: 24px; }
   .wrapper .area {
     margin: 0;
     padding: 50px; }
@@ -279,7 +280,7 @@ h1, h2, h3, h4, h5 {
         background: #007bb6; }
       .wrapper .contact .contacties .contacty a.gitHub:hover {
         background: #111; }
-  .wrapper p {
+  .wrapper .contact p {
     clear: both; }
 
 header {
