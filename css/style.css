@@ -311,6 +311,7 @@ header {
       margin: 0 10px; }
 
 footer {
+  font-size: 12px;
   width: 100%;
   background: #333;
   color: #f7f7f7;
