@@ -55,7 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills a {
   font-family: 'Raleway', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none; }
   .skills a .icon {
     font-size: 4em; }
 
@@ -274,7 +275,6 @@ body {
     padding: 50px;
     background-color: #fff;
     margin-bottom: 2%;
-    text-decoration: none;
     border-radius: 5px;
     border: 1px solid #7f8c8d;
     height: 200px;
