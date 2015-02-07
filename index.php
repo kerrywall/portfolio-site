@@ -19,7 +19,7 @@ $portfolioQuery = new WP_Query(
 		'posts_per_page' => -1,
 		'post_type' => 'portfolio',
 		'order_by' => 'title',
-		'order' => 'ASC'
+		'order' => 'DSC'
 		)
 	);
 
@@ -71,32 +71,28 @@ $blogQuery = new WP_Query(
 			<h2>Portfolio</h2>
 
 			<?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
-
-				<section id="<?php echo $post->post_name; ?>" class="item">
-					<div class="images">
-					  <a href="<?php echo get_permalink(); ?>">
-					  <h5 class="title"></span> <?php the_field('title'); ?></h5>
-					  <?php while( has_sub_field('images') ): ?>
-					    <div class="image">
-					      <?php $image = get_sub_field('image'); ?>
-					      <img src="<?php echo $image['sizes']['large'] ?>">
-					    </div>
-					  <?php endwhile; ?>
-					  <div class="infoBox">
-					  	<div class="info">
-					  		<p class="tags"><strong>Made with:</strong>	<?php the_terms($post->ID, 'technologies'); ?></p>
-					  		<p class="link"><a href="<?php the_field('url') ?>" target="_blank">View original <span class="fa fa-external-link"></span></a></p>
-					  		<p class="client"><?php the_field('made_for'); ?></p>
-					  	</div>
-					  </div>
-						  
-					</div>
-					</a>
-				</section>
-				<div class="portfolioFull">
-					
-					<?php the_field('description'); ?>
-
+				<div class="thing">
+					<section id="<?php echo $post->post_name; ?>" class="item">
+						<div class="images">
+						  <a href="<?php echo get_permalink(); ?>">
+						  <h5 class="title"></span> <?php the_field('title'); ?></h5>
+						  <?php while( has_sub_field('images') ): ?>
+						    <div class="image">
+						      <?php $image = get_sub_field('image'); ?>
+						      <img src="<?php echo $image['sizes']['large'] ?>">
+						    </div>
+						  <?php endwhile; ?>
+						  <div class="infoBox">
+						  	<div class="info">
+						  		<p class="tags"><strong>Made with:</strong>	<?php the_terms($post->ID, 'technologies'); ?></p>
+						  		<p class="link"><a href="<?php the_field('url') ?>" target="_blank">View original <span class="fa fa-external-link"></span></a></p>
+						  		<p class="client"><?php the_field('made_for'); ?></p>
+						  	</div>
+						  </div>
+							  
+						</div>
+						</a>
+					</section>
 				</div>
 			<?php endwhile; ?>
 

@@ -1,0 +1,512 @@
+// imports
+
+ @import '_grid';
+ @import '_colours';
+ @import '_reset';
+ @import '_borderbox';
+ @import '_clearfix';
+ @import '_fonts';
+
+
+ // let's go!
+
+body {
+	background: url(../kw/images/espresso.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+ .site {
+ 	margin: 0 auto;
+ }
+
+ .divider {
+    position : relative;
+    display : block;
+    margin : 0 auto;
+    transform: skewY(170deg);
+    padding: 100px 0;
+    .content {
+		transform: skewY(10deg);
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 20px 20px 50px 20px;
+		.logo {
+			text-align: center;
+			font-size: 3em;
+			margin: -50px auto 10px auto;
+			span {
+				padding: 20px;
+				border-radius: 50%;
+			}
+		}
+    }
+}
+
+.site-header {
+	color: $clouds;
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 20px 50px 20px;
+	a {
+		color: $clouds;
+		text-decoration: none;
+	}
+	h1 {
+		a {
+			border-top: 1px solid $clouds;
+			border-bottom: 1px solid $clouds;
+			padding: 10px 0;
+		}
+	}
+	.menu {
+		.primary-navigation {
+			float: left;
+			a {
+				transition: color .5s ease;
+				&:hover {
+					color: $alizarin;
+				}
+			}
+			ul {
+				padding: 0;
+				text-align: left;
+				list-style-type: none;
+				margin: 0;
+				li {
+					display: inline;
+					margin: 0 20px 0 0;
+				}
+			}
+		}
+		.social {
+			float: left;
+			a {
+				transition: color .5s ease;
+				&:hover {
+					color: $alizarin;
+				}
+			}
+			text-align: left;
+			span {
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+.header-main {
+	transition: all 1s ease;
+}
+
+.fixed {
+	display: none;
+	background: #fff;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	height: auto;
+	padding: 10px 0;
+	line-height: 1.5;
+	box-shadow: 0 0 3px #000;
+	a {
+		color: #000;
+		.active {
+			color: darken($pomegranate, 20%);
+		}
+	}
+	h1 {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		text-shadow: none; 
+		a{
+			border-top: none;
+			border-bottom: none;
+		}
+	}
+	h3 {
+		display: none;
+	}
+	.menu {
+		display: inline-block;
+		margin-left: 10px;
+		.primary-navigation {
+			float: none;
+			display: inline-block;
+			ul {
+				color: #000;
+			}
+			.menu-primary-container {
+				display: inline-block;
+			}
+		}
+		.social {
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+.about {
+	background: url(../kw/images/black-Linen.png);
+	color: $clouds;
+	a {
+		color: $clouds;
+		text-decoration: underline;
+	}
+	img {
+		border-radius: 50%;
+		float: left;
+		margin: 0 30px;
+		border: 2px solid $pomegranate;
+	}
+	.logo {
+		span {
+			color: #333;
+			background: $clouds;
+		}
+	}
+}
+
+.skills {
+	background: $peterRiver;
+	color: $clouds;
+	text-align: center;
+	ul {
+		padding: 0;
+	}
+	a {
+		@include column(3);
+		padding: 50px;
+		background-color: #fff;
+		margin-bottom: 2%;
+		text-decoration: none;
+		border-radius: 5px;
+		border: 1px solid $asbestos;
+		height: 200px;
+		color: #666;
+		transition: all .3s ease;
+		.icon {
+			display: block;
+			margin-bottom: 10px;
+		}
+		&:hover {
+			background: $peterRiver;
+			color: #fff;
+			border-color: #fff;
+		}
+	}
+	p {
+		clear: both;
+	}
+	ul {
+		list-style-type: none;
+		margin-bottom: 10px;
+	}
+	.logo {
+		span {
+			color: $peterRiver;
+			background: $clouds;
+		}
+	}
+}
+
+.portfolio {
+	background: #fff;
+	color: #000;
+	z-index: 1;
+	.item {
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+		&:hover {
+			img {
+				opacity: 1;
+			}
+		}
+		@include column(6);
+		border-radius: 5px;
+		border: 1px solid $clouds;
+		padding: 20px;
+		margin-bottom: 2%;
+		position: relative;
+		height: 420px;
+		overflow: hidden;
+		.title {
+			margin-top: 0;
+			text-align: center;
+		}
+		.info {
+			padding: 10px;
+			.client {
+				color: $silver;
+				margin: 0;
+			}
+		}
+		img {
+			width: 100%;
+			border-radius: 5px;
+			opacity: .7;
+			transition: all 1s ease;
+		}
+	}
+	.logo {
+		span {
+			color: #fff;
+			background: #000;
+		}
+	}
+}
+
+.theBlog {
+	background: $midnightBlue;
+	color: $clouds;
+	section {
+		@include column(6);
+		height: 430px;
+		overflow: hidden;
+		margin-bottom: 2%;
+		color: black;
+		background: white;
+		border-radius: 5px;
+		&:hover {
+			opacity: 0.6;
+		}
+		.info {
+			padding: 10px;
+			background: #fff;
+			.title {
+				@include column(12);
+				@include push(2);
+				margin: 0;
+			}
+			.date {
+				@include column(2);
+				padding-right: 5px;
+			}
+			.excerpt {
+				@include column(10);
+			}
+			.tags {
+				clear: both;
+			}
+		}
+		a {
+			color: $midnightBlue;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 5px;
+			padding: 0;
+		}
+	}
+	.logo {
+		span {
+			color: $midnightBlue;
+			background: $clouds;
+		}
+	}
+}
+
+footer {
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.social {
+		transform: skewY(170deg);
+		width: 100%;
+		padding: 50px;
+		margin-top: 150px;
+		color: $pomegranate;
+		background: white;
+		span {
+			margin: 0 50px 0 0;
+		}
+		a {
+			color: $pomegranate;
+			&:hover {
+				color: darken($pomegranate, 20%);
+			}
+		}
+	}
+	.site-info {
+		vertical-align: bottom;
+		color: #fff;
+		margin-top: 150px;
+		padding: 5px;
+	}
+}
+
+.content-area {
+	position : relative;
+    display : block;
+    margin : 0 auto;
+    transform: skewY(170deg);
+    padding: 100px 0;
+  	background: #fff;
+
+  	.site-content {
+  		transform: skewY(10deg);
+  		max-width: 960px;
+  		margin: 0 auto;
+  		padding: 20px 20px 50px 20px;
+
+  		.page-content {
+  			.search-form {
+  				input {
+  					border: 1px solid $wetAsphalt;
+  					outline: 0;
+  				}
+  				.search-submit {
+  					background: $clouds;
+  					border: 0;
+  				}
+  			}
+  		}
+
+  		.content-sidebar {
+  			ul {
+  				padding: 20px;
+  			}
+  		}
+
+		article.type-portfolio {
+			padding-bottom: 50px;
+			border-bottom: 1px dotted $concrete;
+		}
+
+		article {
+			.alignleft {
+				float: left;
+				margin: 0 10px 10px 0;
+			}
+		}
+  		.taggedImage {
+  			@include column(5);
+  		}
+  		.taggedInfo {
+  			@include column(7);
+  		}
+  		.portfolioItem {
+  			.images{
+  				@include column(12);
+  			}
+  		}
+  		.left {
+  			@include column(9);
+  		}
+  		.right {
+  			@include column(3);
+  		}
+  		a {
+  			color: $midnightBlue;
+  			font-weight: bold;
+  		}
+  		a.post-thumbnail {
+  			display: none;
+  		}
+  	}
+}
+
+// RESPONSIVATE!
+
+@media (max-width: 940px) {
+	.content-area {
+		.site-content {
+			.left {
+				@include column(12);
+			}
+			.right {
+				@include column(12);
+			}
+		}
+	}
+	.skills {
+		a {
+			@include column(6);
+			margin-bottom: 2%;
+		}
+	}
+}
+
+@media (max-width: 840px) {
+	.content-area {
+		.site-content {
+			.taggedImage {
+				@include column(12);
+			}
+			.taggedInfo {
+				@include column(12);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio {
+		.item {
+			@include column(12);
+			margin-bottom: 2%;
+			.infoBox {
+				position: relative;
+				width: 100%;
+				transform: none;
+				.info {
+					transform: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	body {
+		background-image: url(../kw/images/pattern.jpg);
+	}
+	.theBlog {
+		section {
+			@include column(12);
+			margin-bottom: 20px;
+			height: auto;
+			img {
+				height: auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.site-content {
+		article {
+			img {
+				@include column(12);
+				height: auto;
+			}
+		}
+	}
+
+	.skills {
+		a {
+			@include column(12);
+			margin-bottom: 2%;
+		}
+	}
+	footer {
+		.social {
+			span {
+				margin: 0 30px 0 0;
+			}
+		}
+	}
+}
