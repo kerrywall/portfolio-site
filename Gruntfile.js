@@ -34,36 +34,6 @@ module.exports = function(grunt) {
         base: ''
       }
     }
-   		dist: {
-   			files: {
-   				'css/style.css':'css/style.scss'
-   			}
-   		}
-   },
-   watch: {
-   	css: {
-   		 files: ['css/*.scss'],
-   		 tasks: ['sass', 'autoprefixer']
-   	},
-   	options: {
-   		liveReload: true
-   	}
-   },
-   autoprefixer: {
-   	options: {
-   		browsers: ['last 5 version', 'ie 7', 'ie 8', 'ie 9']
-   	},
-   	no_dest: {
-   		src: 'css/style.css'
-   	}
-   },
-   connect: {
-   	server: {
-   		options: {
-   			port: 9001,
-   			base: ''
-   		}
-   	}
    },
    imagemin: {                          // Task
        dynamic: {                         // Another target
@@ -80,12 +50,8 @@ module.exports = function(grunt) {
        minify: {
          expand: true,
          cwd: '',
-         src: ['*.css', '*.css'],
-         dest: '',
-         ext: '.css'
-         cwd: 'css/',
          src: ['*.css', '!*.min.css'],
-         dest: 'css/',
+         dest: '',
          ext: '.min.css'
        }
      }
